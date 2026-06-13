@@ -1,0 +1,438 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import heroPortrait from '../assets/images/hero-portrait.webp';
+import vslThumbnail from '../assets/images/vsl-thumbnail.webp';
+import aboutZander from '../assets/images/about-zander.webp';
+import '../styles/home.css';
+
+const graphSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://zandertran.com/#website',
+      url: 'https://zandertran.com/',
+      name: 'Zander Tran',
+      description:
+        'AI-powered authority building for Gen X professionals with 20+ years of expertise and zero online presence.',
+      publisher: { '@id': 'https://zandertran.com/#person' },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://zandertran.com/#person',
+      name: 'Zander Tran',
+      url: 'https://zandertran.com/',
+      image: 'https://zandertran.com/og-image.webp',
+      jobTitle: 'Authority Platform Strategist',
+      description:
+        'Helping Gen X professionals with 20+ years of expertise build AI-powered authority platforms and monetize their knowledge.',
+      sameAs: ['https://youtube.com/@ZanderTranAI', 'https://facebook.com/ZanderTranAI'],
+      knowsAbout: [
+        'Authority Building',
+        'AI Tools for Professionals',
+        'Online Course Creation',
+        'Personal Branding',
+        'Knowledge Monetization',
+      ],
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Zander Tran: The Invisible Expert System"
+  description="Zander Tran: The Invisible Expert System. AI-powered authority building for Gen X professionals with 20+ years of expertise and zero online visibility."
+  path="/"
+  ogDescription="AI-powered authority building for Gen X professionals with 20+ years of expertise and zero online presence. Build your visibility platform without ever being on camera."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(graphSchema)} />
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+
+    <div class="hero-content">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <span class="hero-eyebrow-text">Silicon Valley · 19 Years · Now Chiang Mai</span>
+        </div>
+
+        <div class="hero-headline">I spent 19 years making</div>
+        <div class="hero-headline"><em>other people</em> famous.</div>
+        <div class="hero-headline-bold">Now I teach you to do it for yourself.</div>
+
+        <p class="hero-sub">
+          If you have <strong>20+ years of real expertise</strong> and zero online visibility,
+          AI just changed the equation. You don't need charisma, a camera, or a following.
+          You need the right system, built by someone who's done it at the highest level.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/#training" class="btn-primary">
+            Watch the Free Training
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a href="/#about" class="btn-ghost">
+            Who is Zander Tran?
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <div class="hero-portrait-frame">
+          <Image src={heroPortrait} alt="Zander Tran: The Invisible Expert System" loading="eager" />
+          <div class="hero-portrait-label">
+            <div class="hero-portrait-name">Zander Tran</div>
+            <div class="hero-portrait-loc">Chiang Mai, Thailand</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY BAR -->
+  <div class="cred-bar">
+    <div class="cred-inner">
+      <span class="cred-label">Built platforms for</span>
+      <div class="cred-divider-line"></div>
+      <div class="cred-names">
+        <span class="cred-name">Dr. Mindy Pelz</span>
+        <span class="cred-sep">·</span>
+        <span class="cred-name">Patti Austin</span>
+        <span class="cred-sep">·</span>
+        <span class="cred-name">Leigh Steinberg</span>
+        <span class="cred-sep">·</span>
+        <span class="cred-name">Dr. Regina Benjamin</span>
+        <span class="cred-sep">·</span>
+        <span class="cred-name" style="color: rgba(253,250,245,0.35); font-style: italic;">and dozens more</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FREE TRAINING -->
+  <section class="training" id="training">
+    <div class="section-inner">
+      <div class="training-grid">
+        <div class="training-text reveal">
+          <div class="section-eyebrow">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">Free Training</span>
+          </div>
+
+          <h2>The Invisible Expert <em>Method</em>: Explained</h2>
+
+          <p>
+            A 30-minute training that shows exactly how Gen X professionals with real expertise
+            are building visible authority platforms using AI, without going on camera,
+            without performing charisma they don't have.
+          </p>
+
+          <ul class="training-points">
+            <li>
+              <span class="check"></span>
+              Why AI didn't replace your expertise. It replaced your excuse for being invisible
+            </li>
+            <li>
+              <span class="check"></span>
+              The one technology shift that lets you build a world-class content presence without ever going on camera
+            </li>
+            <li>
+              <span class="check"></span>
+              The six monetization paths available to an invisible expert right now, and which one fits you
+            </li>
+            <li>
+              <span class="check"></span>
+              What I built in 90 days, and the exact system behind it
+            </li>
+          </ul>
+
+          <a href="https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl" class="btn-primary">
+            Watch Free Now, No Opt-In
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="vsl-card">
+            <div class="vsl-screen">
+              <Image src={vslThumbnail} alt="Zander Tran Free Training" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0.7;" />
+              <a href="https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl" class="vsl-play" target="_blank" rel="noopener">
+                <div class="play-btn">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M7 4l13 7-13 7V4z" fill="white"></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="vsl-meta">
+              <span class="vsl-label">Free Training</span>
+              <span class="vsl-duration">28:47</span>
+            </div>
+            <div class="vsl-title">The Invisible Expert Method: How Gen X Professionals Are Using AI to Finally Become Visible</div>
+            <div class="vsl-badge">
+              <div class="vsl-badge-dot"></div>
+              <span class="vsl-badge-text">No opt-in required</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE METHOD PILLARS -->
+  <section class="method">
+    <div class="section-inner">
+      <div class="method-header reveal">
+        <div class="section-eyebrow" style="justify-content: center;">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">The System</span>
+          <div class="eyebrow-line"></div>
+        </div>
+        <h2>Three forces. One system.<br><em style="color: var(--gold-light)">No camera required.</em></h2>
+        <p>The Invisible Expert System runs on three interconnected pillars. Each one removes a barrier your competitors still have.</p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card reveal">
+          <div class="method-number">01</div>
+          <h3>The AI Avatar</h3>
+          <p>HeyGen's photorealistic AI avatar technology means your face is never required. Your expertise is. Record once. Publish forever. The avatar delivers. You direct.</p>
+        </div>
+        <div class="method-card reveal reveal-delay-1">
+          <div class="method-number">02</div>
+          <h3>The Authority Platform</h3>
+          <p>YouTube + Newsletter + Blog + Community. Built in a specific sequence so each layer compounds the one before it. No algorithm dependency. Owned audience.</p>
+        </div>
+        <div class="method-card reveal reveal-delay-2">
+          <div class="method-number">03</div>
+          <h3>The Revenue Engine</h3>
+          <p>Six monetization paths mapped to your expertise, your lifestyle, and your income timeline. Choose your path in Week 1. Build toward it from Day 1.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section reveal">
+    <p class="quote-text">
+      "I spent 19 years making other people famous. Celebrities. Doctors. Authors.
+      I was the best in the room at every table I sat at, and nobody outside that room
+      ever knew my name. AI just gave me a reason to change my mind,
+      and a tool that lets me step forward <em>without becoming someone I'm not.</em>"
+    </p>
+    <span class="quote-attr">Zander Tran, Founder · The Invisible Expert System</span>
+  </div>
+
+  <!-- START HERE -->
+  <section class="start-here" id="start-here">
+    <div class="section-inner">
+      <div class="start-header reveal">
+        <div>
+          <div class="section-eyebrow">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">Start Here</span>
+          </div>
+          <h2>The essential reading<br>for invisible experts</h2>
+        </div>
+        <a href="/articles/" class="view-all">
+          View all articles
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="articles-grid">
+        <a href="/articles/monetize-expertise-online" class="article-card reveal">
+          <span class="article-tag">AI Strategy</span>
+          <div class="article-title">AI Didn't Replace Your Expertise. It Replaced Your Excuse for Being Invisible.</div>
+          <p class="article-excerpt">The reframe that changes everything for Gen X professionals sitting on 20+ years of genuine expertise with no platform to say it from.</p>
+          <div class="article-footer">
+            <span class="read-time">8 min read</span>
+            <div class="read-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="/articles/build-authority-online-without-camera" class="article-card reveal reveal-delay-1">
+          <span class="article-tag">Authority Building</span>
+          <div class="article-title">How Gen X Professionals Build Authority Online Without Showing Their Face</div>
+          <p class="article-excerpt">The exact technology stack and methodology behind faceless authority platforms, and why 2026 is the last easy year to establish this.</p>
+          <div class="article-footer">
+            <span class="read-time">11 min read</span>
+            <div class="read-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="/articles/how-to-monetize-your-expertise" class="article-card reveal reveal-delay-2">
+          <span class="article-tag">Career Reinvention</span>
+          <div class="article-title">The Six Monetization Paths for Invisible Experts, and How to Choose Yours</div>
+          <p class="article-excerpt">Community, course, consulting funnel, newsletter, speaking pipeline, productized service. One of these fits your expertise and your life perfectly.</p>
+          <div class="article-footer">
+            <span class="read-time">14 min read</span>
+            <div class="read-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE CTA -->
+  <section class="challenge">
+    <div class="challenge-inner">
+      <div class="challenge-text reveal">
+        <div class="section-eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">5-Day Challenge · $27</span>
+        </div>
+        <h2>Build your <em>AI authority platform</em> in 5 days. Not learn about it. Build it.</h2>
+        <p>
+          Visible in 5 is the fastest path from invisible expert to published, credentialed authority.
+          Five days. Five deliverables. One AI avatar you own. $27 to start.
+        </p>
+        <a href="#" class="btn-primary">
+          Start the Challenge
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="challenge-days">
+          <div class="day-card">
+            <div class="day-num">Day 01</div>
+            <div class="day-title">Your AI Unfair Advantage</div>
+          </div>
+          <div class="day-card">
+            <div class="day-num">Day 02</div>
+            <div class="day-title">Find Your Niche in 60 Minutes</div>
+          </div>
+          <div class="day-card">
+            <div class="day-num">Day 03</div>
+            <div class="day-title">Build Your AI Avatar Today</div>
+          </div>
+          <div class="day-card">
+            <div class="day-num">Day 04</div>
+            <div class="day-title">Create Your First Content</div>
+          </div>
+          <div class="day-card day-card-last">
+            <div class="day-num">Day 05</div>
+            <div class="day-title">Your 30-Day Visibility Plan, and the path forward</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="photo-frame">
+            <Image src={aboutZander} alt="Zander Tran, Founder, The Invisible Expert System" class="about-img" />
+            <div class="about-frame-tag">
+              <div class="about-frame-name">Zander Tran</div>
+              <div class="about-frame-role">Founder, The Invisible Expert System<br>Chiang Mai, Thailand</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal reveal-delay-1">
+          <div class="section-eyebrow">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">About</span>
+          </div>
+          <h2>The peer who figured it out <em>first.</em></h2>
+
+          <p>
+            I'm a 58-year-old Silicon Valley engineer, BSEE from UCLA, MBA from
+            St. Mary's, who spent 19 years building digital platforms for some of the most
+            recognized names in the world. Dr. Mindy Pelz went from zero to a global health celebrity.
+            I built the platform. Leigh Steinberg. Patti Austin. Dr. Regina Benjamin, former US Surgeon General.
+            I was at every table. Nobody outside the room knew my name. I chose that.
+          </p>
+
+          <p>
+            AI just gave me a reason to change my mind. Not because I was displaced. Because
+            the technology finally exists to let someone like me step forward without performing
+            a personality I don't have. <strong>No camera. No charisma act. No starting over.</strong>
+          </p>
+
+          <p>
+            I built The Invisible Expert System for every Gen X professional who's been
+            brilliant in the background long enough. It's time.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-num">19</div>
+              <div class="stat-label">Years Building<br>Celebrity Platforms</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">58</div>
+              <div class="stat-label">Years Old &<br>Just Getting Started</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">6</div>
+              <div class="stat-label">Proprietary AI<br>Tools in the System</div>
+            </div>
+          </div>
+
+          <a href="/#training" class="btn-primary">
+            Watch My Free Training
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-inner reveal">
+      <div class="section-eyebrow" style="justify-content: center;">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Every Tuesday</span>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h2>One thing that moves the needle. Every week.</h2>
+      <p>The Invisible Expert newsletter. One actionable insight for Gen X professionals building authority platforms. No filler. No hype. Just what's working, from someone doing it.</p>
+      <div class="email-form">
+        <input type="email" class="email-input" placeholder="your@email.com" />
+        <button class="email-btn">Join Free</button>
+      </div>
+      <div class="newsletter-note">No spam · Unsubscribe anytime · Every Tuesday</div>
+    </div>
+  </section>
+</BaseLayout>

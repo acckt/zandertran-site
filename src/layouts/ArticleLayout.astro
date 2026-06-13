@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import ArticleCta from '../components/ArticleCta.astro';
+import Faq from '../components/Faq.astro';
+import '../styles/article.css';
+
+export interface Props {
+  entry: CollectionEntry<'articles'>;
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const slug = entry.id;
+const path = `/articles/${slug}`;
+
+const canonical = new URL(path, Astro.site).href;
+const imageUrl = new URL('/og-image.webp', Astro.site).href;
+const heroAlt = d.heroImageAlt ?? d.featureImageAlt;
+const eyebrow = `${d.category} · ${d.readTime}`;
+
+const fmtDate = (date: Date) => date.toISOString().slice(0, 10);
+const stripHtml = (s: string) => s.replace(/<[^>]+>/g, '');
+
+const PERSON_ID = 'https://zandertran.com/#person';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  url: canonical,
+  image: imageUrl,
+  datePublished: fmtDate(d.pubDate),
+  dateModified: fmtDate(d.updatedDate ?? d.pubDate),
+  ...(d.keywords ? { keywords: d.keywords } : {}),
+  author: { '@type': 'Person', '@id': PERSON_ID, name: 'Zander Tran', url: 'https://zandertran.com/' },
+  publisher: { '@type': 'Person', '@id': PERSON_ID, name: 'Zander Tran', url: 'https://zandertran.com/' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  isPartOf: { '@id': 'https://zandertran.com/#website' },
+};
+
+const faqSchema = d.faqs && d.faqs.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: d.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: stripHtml(f.a) },
+      })),
+    }
+  : null;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zandertran.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://zandertran.com/articles/' },
+    { '@type': 'ListItem', position: 3, name: d.title, item: canonical },
+  ],
+};
+---
+<BaseLayout
+  title={d.seoTitle ?? d.title}
+  description={d.description}
+  path={path}
+  ogType="article"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+    {faqSchema && <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />}
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <article class="article-hero">
+    <div class="article-feature-image">
+      <Image src={d.featureImage} alt={heroAlt} loading="eager" />
+    </div>
+    <div class="article-header">
+      <div class="article-eyebrow">
+        <div class="article-eyebrow-line"></div>
+        <span class="article-eyebrow-text">{eyebrow}</span>
+      </div>
+      <h1>{d.title}</h1>
+      <div class="article-meta">
+        <span class="article-meta-item">Zander Tran</span>
+        <span class="article-meta-sep"></span>
+        <span class="article-meta-item">ZanderTran.com</span>
+        <span class="article-meta-sep"></span>
+        <span class="article-meta-item">{d.category}</span>
+        <span class="article-meta-sep"></span>
+        <span class="article-meta-item">{d.readTime}</span>
+      </div>
+    </div>
+  </article>
+
+  <div class="article-container">
+    <a href="/articles/" class="article-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M10 7H4M6 4l-3 3 3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      All articles
+    </a>
+
+    {d.lede && <p class="article-lede">{d.lede}</p>}
+
+    <div class="article-body">
+      <slot />
+
+      {d.ctaTitle && (
+        <ArticleCta
+          eyebrow={d.ctaEyebrow}
+          title={d.ctaTitle}
+          text={d.ctaText}
+          url={d.ctaUrl}
+          button={d.ctaButton}
+        />
+      )}
+
+      {d.faqs && d.faqs.length > 0 && (
+        <>
+          <hr />
+          <Faq faqs={d.faqs} />
+        </>
+      )}
+    </div>
+  </div>
+</BaseLayout>
