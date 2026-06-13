@@ -10,6 +10,11 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  markdown: {
+    // Keep straight quotes (matches the hand-coded site + frontmatter copy) and,
+    // critically, stop "--"/"---" from becoming en/em dashes (zero em dash brand rule).
+    smartypants: false,
+  },
   integrations: [
     sitemap(),
     mdx(),

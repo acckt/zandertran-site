@@ -7,37 +7,37 @@
     {
       "source": "/articles/your-resume-was-never-meant-for-ai.html",
       "destination": "/articles/your-resume-was-never-meant-for-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/articles/monetize-expertise-online.html",
       "destination": "/articles/monetize-expertise-online",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/articles/build-authority-online-without-camera.html",
       "destination": "/articles/build-authority-online-without-camera",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/articles/how-to-monetize-your-expertise.html",
       "destination": "/articles/how-to-monetize-your-expertise",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/articles/ai-replaced-your-excuse.html",
       "destination": "/articles/monetize-expertise-online",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/privacy-policy.html",
       "destination": "/privacy-policy",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/terms.html",
       "destination": "/terms",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
