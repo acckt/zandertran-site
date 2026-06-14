@@ -1,0 +1,19 @@
+---
+export interface Props {
+  faqs: { q: string; a: string }[];
+}
+const { faqs } = Astro.props;
+---
+<div class="faq-section">
+  <div class="faq-eyebrow">
+    <div class="faq-eyebrow-line"></div>
+    <span class="faq-eyebrow-text">Frequently Asked Questions</span>
+  </div>
+
+  {faqs.map((f) => (
+    <div class="faq-item">
+      <h4>{f.q}</h4>
+      <p set:html={f.a} />
+    </div>
+  ))}
+</div>

@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/articles-index.css';
+
+const all = await getCollection('articles', ({ data }) => !data.draft);
+
+const readMins = (s: string) => parseInt(s, 10) || 0;
+// Newest first; stable tiebreak by read time ascending (reproduces the curated order).
+const sorted = all.sort((a, b) => {
+  const t = b.data.pubDate.getTime() - a.data.pubDate.getTime();
+  return t !== 0 ? t : readMins(a.data.readTime) - readMins(b.data.readTime);
+});
+
+const featured = sorted.find((a) => a.data.featured) ?? sorted[0];
+const grid = sorted.filter((a) => a.id !== featured.id);
+---
+<BaseLayout
+  title="Articles | Zander Tran"
+  description="Essential reading on authority building, AI strategy, and career reinvention for Gen X professionals with 20+ years of expertise."
+  path="/articles/"
+>
+  <section class="page-header">
+    <div class="page-header-inner">
+      <div class="page-eyebrow">
+        <div class="page-eyebrow-line"></div>
+        <span class="page-eyebrow-text">Essential Reading</span>
+      </div>
+      <h1>The ideas behind<br>The Invisible Expert System</h1>
+      <p>Four articles on authority building, AI strategy, and career reinvention for Gen X professionals with 20+ years of expertise and zero online presence.</p>
+    </div>
+  </section>
+
+  <section class="articles-section">
+    <div class="articles-inner">
+
+      <a href={`/articles/${featured.id}`} class="article-featured">
+        <div class="article-featured-image">
+          <Image src={featured.data.featureImage} alt={featured.data.featureImageAlt} loading="eager" />
+        </div>
+        <div class="article-featured-content">
+          <div class="card-eyebrow">
+            <div class="card-eyebrow-line"></div>
+            <span class="card-eyebrow-text">{featured.data.category}</span>
+          </div>
+          <h2>{featured.data.title}</h2>
+          <p>{featured.data.excerpt ?? featured.data.description}</p>
+          <div class="card-meta">
+            <span class="card-read-time">{featured.data.readTime}</span>
+            <span class="card-arrow">
+              Read article
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <div class="articles-index-grid">
+        {grid.map((article) => (
+          <a href={`/articles/${article.id}`} class="article-index-card">
+            <div class="card-image">
+              <Image src={article.data.featureImage} alt={article.data.featureImageAlt} loading="lazy" />
+            </div>
+            <div class="card-content">
+              <div class="card-eyebrow">
+                <div class="card-eyebrow-line"></div>
+                <span class="card-eyebrow-text">{article.data.category}</span>
+              </div>
+              <h2>{article.data.title}</h2>
+              <p>{article.data.excerpt ?? article.data.description}</p>
+              <div class="card-meta">
+                <span class="card-read-time">{article.data.readTime}</span>
+                <span class="card-arrow">
+                  Read article
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="newsletter-strip">
+    <div class="newsletter-strip-text">
+      <h3>The Invisible Expert, every Tuesday</h3>
+      <p>One tactic, one tool, one insight for Gen X professionals building authority with AI. No fluff. No camera required.</p>
+    </div>
+    <a href="https://start.zandertran.com/the-invisible-expert-system-vsl/checkout/the-invisible-expert-system-vsl" class="btn-primary" target="_blank">
+      Start the Challenge
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/legal.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  path: string;
+  heading: string;
+  effectiveDate: string;
+}
+const { title, description, path, heading, effectiveDate } = Astro.props;
+---
+<BaseLayout title={title} description={description} path={path}>
+  <section class="page-header">
+    <div class="page-header-inner">
+      <div class="page-eyebrow">
+        <div class="page-eyebrow-line"></div>
+        <span class="page-eyebrow-text">Legal</span>
+      </div>
+      <h1>{heading}</h1>
+      <p class="effective-date">Effective Date: {effectiveDate}</p>
+    </div>
+  </section>
+
+  <div class="legal-container">
+    <div class="legal-body">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

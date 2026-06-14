@@ -1,0 +1,20 @@
+---
+// Single source of truth for the site nav.
+// Mobile menu fix lives in global.css (.nav-links.open height: calc(100vh - 64px)),
+// required because nav's backdrop-filter makes it the containing block for fixed children.
+---
+<nav>
+  <a href="/" class="nav-logo">Zander <span>Tran</span></a>
+  <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#training">Free Training</a></li>
+    <li><a href="/#start-here">Start Here</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="https://pinball.community/invisible-expert" class="nav-cta">Join the Community →</a></li>
+  </ul>
+</nav>
