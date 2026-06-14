@@ -1,10 +1,23 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import heroPortrait from '../assets/images/hero-portrait.webp';
 import vslThumbnail from '../assets/images/vsl-thumbnail.webp';
 import aboutZander from '../assets/images/about-zander.webp';
 import '../styles/home.css';
+
+// "Start Here" features these 3 articles. Title/excerpt/category/read time are
+// pulled from the articles themselves so the cards can never drift out of sync.
+const startHereSlugs = [
+  'monetize-expertise-online',
+  'build-authority-online-without-camera',
+  'how-to-monetize-your-expertise',
+];
+const allArticles = await getCollection('articles');
+const startHere = startHereSlugs
+  .map((slug) => allArticles.find((a) => a.id === slug))
+  .filter((a) => a !== undefined);
 
 const graphSchema = {
   '@context': 'https://schema.org',
@@ -259,47 +272,24 @@ const graphSchema = {
       </div>
 
       <div class="articles-grid">
-        <a href="/articles/monetize-expertise-online" class="article-card reveal">
-          <span class="article-tag">AI Strategy</span>
-          <div class="article-title">AI Didn't Replace Your Expertise. It Replaced Your Excuse for Being Invisible.</div>
-          <p class="article-excerpt">The reframe that changes everything for Gen X professionals sitting on 20+ years of genuine expertise with no platform to say it from.</p>
-          <div class="article-footer">
-            <span class="read-time">8 min read</span>
-            <div class="read-arrow">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
-              </svg>
+        {startHere.map((article, i) => (
+          <a
+            href={`/articles/${article.id}`}
+            class:list={['article-card', 'reveal', i === 1 && 'reveal-delay-1', i === 2 && 'reveal-delay-2']}
+          >
+            <span class="article-tag">{article.data.category}</span>
+            <div class="article-title">{article.data.title}</div>
+            <p class="article-excerpt">{article.data.excerpt ?? article.data.description}</p>
+            <div class="article-footer">
+              <span class="read-time">{article.data.readTime}</span>
+              <div class="read-arrow">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
+                </svg>
+              </div>
             </div>
-          </div>
-        </a>
-
-        <a href="/articles/build-authority-online-without-camera" class="article-card reveal reveal-delay-1">
-          <span class="article-tag">Authority Building</span>
-          <div class="article-title">How Gen X Professionals Build Authority Online Without Showing Their Face</div>
-          <p class="article-excerpt">The exact technology stack and methodology behind faceless authority platforms, and why 2026 is the last easy year to establish this.</p>
-          <div class="article-footer">
-            <span class="read-time">11 min read</span>
-            <div class="read-arrow">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
-              </svg>
-            </div>
-          </div>
-        </a>
-
-        <a href="/articles/how-to-monetize-your-expertise" class="article-card reveal reveal-delay-2">
-          <span class="article-tag">Career Reinvention</span>
-          <div class="article-title">The Six Monetization Paths for Invisible Experts, and How to Choose Yours</div>
-          <p class="article-excerpt">Community, course, consulting funnel, newsletter, speaking pipeline, productized service. One of these fits your expertise and your life perfectly.</p>
-          <div class="article-footer">
-            <span class="read-time">14 min read</span>
-            <div class="read-arrow">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
-              </svg>
-            </div>
-          </div>
-        </a>
+          </a>
+        ))}
       </div>
     </div>
   </section>
