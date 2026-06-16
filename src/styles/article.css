@@ -269,7 +269,7 @@ body::before {
       align-items: center;
       gap: 10px;
       background: var(--gold);
-      color: var(--navy);
+      color: var(--warm-white);
       font-family: 'DM Sans', sans-serif;
       font-size: 14px;
       font-weight: 600;
@@ -286,7 +286,7 @@ body::before {
       background: var(--gold-light);
       transform: translateY(-1px);
       box-shadow: 0 8px 32px rgba(192,139,58,0.3);
-      color: var(--navy);
+      color: var(--warm-white);
       border: none;
     }
 
