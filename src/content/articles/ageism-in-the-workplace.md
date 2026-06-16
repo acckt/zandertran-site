@@ -19,7 +19,7 @@ keywords: "ageism in the workplace, workplace ageism, age discrimination in the 
 ctaEyebrow: "The Invisible Expert · Free"
 ctaTitle: "Watch The Invisible Expert Method"
 ctaText: "19 years building authority platforms for celebrities and executives. Now I built one for myself, without going on camera. Watch the free training to see exactly how it works."
-ctaUrl: "https://go.zandertran.com/invisible-expert"
+ctaUrl: "https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl"
 ctaButton: "Watch Free"
 faqs:
   - q: "What are the signs of ageism in the workplace?"
@@ -44,7 +44,7 @@ She updated her resume. Applied to 38 roles over three months. Heard back from s
 
 She knew what it meant. Most people in her position know exactly what it means.
 
-If you want to see what the professionals who navigate this successfully actually do instead, watch [The Invisible Expert Method](https://go.zandertran.com/invisible-expert). Free to watch. No email required. Then keep reading.
+If you want to see what the professionals who navigate this successfully actually do instead, watch [The Invisible Expert Method](https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl). Free to watch. No email required. Then keep reading.
 
 Because what happened to her has a name, a documented mechanism, and a specific set of reasons why the usual advice makes things worse instead of better. This article covers what ageism in the workplace actually looks like, why it's accelerating, why the standard responses rarely work, and what the professionals who come out ahead actually do instead.
 
@@ -144,7 +144,7 @@ They use AI tools as a distribution mechanism. The same shift making their corpo
 
 None of this requires starting from zero. The expertise is already there. The platform is what needs to be built.
 
-If you want to see the path experienced professionals are using to build income outside that system, watch [The Invisible Expert Method](https://go.zandertran.com/invisible-expert). Free. No email required.
+If you want to see the path experienced professionals are using to build income outside that system, watch [The Invisible Expert Method](https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl). Free. No email required.
 
 If you're also working through what the next professional chapter looks like (and what the standard career change advice gets wrong), see [Career Change at 50: What Actually Works](/articles/career-change-at-50).
 

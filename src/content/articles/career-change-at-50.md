@@ -19,7 +19,7 @@ keywords: "career change at 50, changing careers at 50, how to change careers at
 ctaEyebrow: "The Invisible Expert · Free"
 ctaTitle: "Watch The Invisible Expert Method"
 ctaText: "19 years building authority platforms for celebrities and executives. Now I built one for myself, without going on camera. Watch the free training to see exactly how it works."
-ctaUrl: "https://go.zandertran.com/invisible-expert"
+ctaUrl: "https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl"
 ctaButton: "Watch Free"
 faqs:
   - q: "Is it too late to change careers at 50?"
@@ -46,7 +46,7 @@ That story belongs to someone I know. But it also belongs to most of the people 
 
 Neither of those things helps.
 
-If you want the method I used to build income outside that system (without going on camera, without starting over), watch [The Invisible Expert Method](https://go.zandertran.com/invisible-expert). It's free, and there's no email required. Then keep reading.
+If you want the method I used to build income outside that system (without going on camera, without starting over), watch [The Invisible Expert Method](https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl). It's free, and there's no email required. Then keep reading.
 
 Because the standard advice for people at this stage isn't just unhelpful. It's structurally wrong. This article covers the three mistakes nearly everyone at this stage makes, what actually works instead, and the reframe that changes the math entirely.
 
@@ -138,7 +138,7 @@ Third, choose a monetization path that doesn't require starting from zero. Consu
 
 The sequence matters. Most people try to monetize before they've built visibility, or they build visibility before the expertise is precise enough to attract the right audience. Order determines speed.
 
-The full method I used to work through this (including the AI tools that make the visibility piece possible without going on camera) is in [The Invisible Expert Method](https://go.zandertran.com/invisible-expert). Free to watch. No email required.
+The full method I used to work through this (including the AI tools that make the visibility piece possible without going on camera) is in [The Invisible Expert Method](https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page#vsl). Free to watch. No email required.
 
 ---
 
