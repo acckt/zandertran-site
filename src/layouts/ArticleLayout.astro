@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import ArticleCta from '../components/ArticleCta.astro';
 import Faq from '../components/Faq.astro';
@@ -13,6 +13,24 @@ const { entry } = Astro.props;
 const d = entry.data;
 const slug = entry.id;
 const path = `/articles/${slug}`;
+
+// Related articles: cluster match first, then category, then most recent
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+const others = allArticles.filter(a => a.id !== slug);
+const scored = others.map(a => ({
+  article: a,
+  score: (d.cluster && a.data.cluster === d.cluster ? 2 : 0)
+       + (a.data.category === d.category ? 1 : 0),
+})).sort((a, b) => b.score - a.score || b.article.data.pubDate.getTime() - a.article.data.pubDate.getTime());
+
+let related = scored.filter(s => s.score > 0).slice(0, 2).map(s => s.article);
+if (related.length < 2) {
+  const fillers = scored
+    .filter(s => s.score === 0)
+    .map(s => s.article)
+    .slice(0, 2 - related.length);
+  related = [...related, ...fillers];
+}
 
 const canonical = new URL(path, Astro.site).href;
 const imageUrl = new URL('/og-image.webp', Astro.site).href;
@@ -74,7 +92,7 @@ const breadcrumbSchema = {
     <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />
   </Fragment>
 
-  <article class="article-hero">
+  <article class="article-hero" data-pagefind-body>
     <div class="article-feature-image">
       <Image src={d.featureImage} alt={heroAlt} loading="eager" />
     </div>
@@ -96,7 +114,7 @@ const breadcrumbSchema = {
     </div>
   </article>
 
-  <div class="article-container">
+  <div class="article-container" data-pagefind-body>
     <a href="/articles/" class="article-back">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
         <path d="M10 7H4M6 4l-3 3 3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -127,4 +145,41 @@ const breadcrumbSchema = {
       )}
     </div>
   </div>
+
+  {related.length > 0 && (
+    <section class="related-section" data-pagefind-ignore>
+      <div class="related-inner">
+        <div class="related-eyebrow">
+          <div class="related-eyebrow-line"></div>
+          <span class="related-eyebrow-text">Continue Reading</span>
+        </div>
+        <div class="related-grid">
+          {related.map(a => (
+            <a href={`/articles/${a.id}`} class="related-card">
+              <div class="related-card-img">
+                <Image src={a.data.featureImage} alt={a.data.featureImageAlt} loading="lazy" />
+              </div>
+              <div class="related-card-body">
+                <div class="related-card-eyebrow">
+                  <div class="related-card-eyebrow-line"></div>
+                  <span class="related-card-eyebrow-text">{a.data.category}</span>
+                </div>
+                <h3>{a.data.title}</h3>
+                <p>{a.data.excerpt ?? a.data.description}</p>
+                <div class="related-card-meta">
+                  <span class="related-card-read-time">{a.data.readTime}</span>
+                  <span class="related-card-arrow">
+                    Read article
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>

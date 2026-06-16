@@ -209,6 +209,29 @@ body {
       50% { opacity: 0.8; transform: scale(1.15); }
     }
 
+/* ─── NAV SEARCH ─── */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted) !important;
+  text-decoration: none;
+  transition: color 0.2s !important;
+  padding: 4px;
+}
+.nav-search:hover { color: var(--warm-white) !important; }
+.nav-search-label { display: none; }
+
+@media (max-width: 768px) {
+  .nav-search-icon { display: none; }
+  .nav-search-label {
+    display: inline;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
 /* ─── HAMBURGER NAV ─── */
     .nav-hamburger {
       display: none;
@@ -235,3 +258,19 @@ body {
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ─── FOOTER RESPONSIVE ─── */
+/* These rules live here (not in page CSS) so they override the base footer rules
+   in the same stylesheet, which loads after the page-specific CSS bundle. */
+@media (max-width: 768px) {
+  footer { padding: 48px 24px 28px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-brand { grid-column: span 2; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-brand { grid-column: span 1; }
+  .footer-urls { flex-direction: column; gap: 8px; }
+}

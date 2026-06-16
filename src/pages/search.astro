@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/search.css';
+---
+<BaseLayout
+  title="Search | Zander Tran"
+  description="Search articles on authority building, AI strategy, and career reinvention for Gen X professionals."
+  path="/search/"
+>
+  <Fragment slot="head">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  </Fragment>
+
+  <section class="search-section">
+    <div class="search-inner">
+      <div class="search-eyebrow">
+        <div class="search-eyebrow-line"></div>
+        <span class="search-eyebrow-text">Site Search</span>
+      </div>
+      <h1>Search</h1>
+      <div id="search">
+        <p class="search-dev-note">Search is available after a build. Run <code>npm run build</code> to enable it.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof PagefindUI !== 'undefined') {
+        var fallback = document.querySelector('.search-dev-note');
+        if (fallback) fallback.remove();
+        new PagefindUI({ element: '#search', showSubResults: true, resetStyles: false });
+      }
+    });
+  </script>
+</BaseLayout>

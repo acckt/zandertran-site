@@ -35,7 +35,14 @@ const grid = sorted.filter((a) => a.id !== featured.id);
   <section class="articles-section">
     <div class="articles-inner">
 
-      <a href={`/articles/${featured.id}`} class="article-featured">
+      <div class="filter-tabs" role="group" aria-label="Filter by category">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="Authority Building">Authority Building</button>
+        <button class="filter-tab" data-filter="AI Strategy">AI Strategy</button>
+        <button class="filter-tab" data-filter="Career Reinvention">Career Reinvention</button>
+      </div>
+
+      <a href={`/articles/${featured.id}`} class="article-featured" data-featured data-category={featured.data.category}>
         <div class="article-featured-image">
           <Image src={featured.data.featureImage} alt={featured.data.featureImageAlt} loading="eager" />
         </div>
@@ -60,7 +67,7 @@ const grid = sorted.filter((a) => a.id !== featured.id);
 
       <div class="articles-index-grid">
         {grid.map((article) => (
-          <a href={`/articles/${article.id}`} class="article-index-card">
+          <a href={`/articles/${article.id}`} class="article-index-card" data-card data-category={article.data.category}>
             <div class="card-image">
               <Image src={article.data.featureImage} alt={article.data.featureImageAlt} loading="lazy" />
             </div>
@@ -86,6 +93,36 @@ const grid = sorted.filter((a) => a.id !== featured.id);
       </div>
     </div>
   </section>
+
+  <script>
+    const tabs = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+    const featured = document.querySelector<HTMLElement>('[data-featured]');
+    const cards = document.querySelectorAll<HTMLElement>('[data-card]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const cat = tab.dataset.filter;
+
+        if (cat === 'all') {
+          featured?.removeAttribute('hidden');
+          cards.forEach(c => c.removeAttribute('hidden'));
+        } else {
+          if (featured?.dataset.category === cat) {
+            featured.removeAttribute('hidden');
+          } else {
+            featured?.setAttribute('hidden', '');
+          }
+          cards.forEach(c => {
+            c.dataset.category === cat
+              ? c.removeAttribute('hidden')
+              : c.setAttribute('hidden', '');
+          });
+        }
+      });
+    });
+  </script>
 
   <div class="newsletter-strip">
     <div class="newsletter-strip-text">
