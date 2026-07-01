@@ -92,6 +92,8 @@ That might mean a short, specific piece of writing about the exact problem you s
 
 None of this takes more than a few hours a week during a search that's already full-time. It doesn't replace applying to roles you actually want. It changes what happens once you do, because the person reading the application is no longer starting from zero information about who sent it.
 
+If the layoff is also making you question the bigger shape of what comes next, not just the next job title, [Career Change at 50](/articles/career-change-at-50) covers the wider diagnosis and the reframe that changes what "next" actually means at this stage.
+
 [The Authority Shift Briefing](https://start.zandertran.com/authority-shift-briefing) lays out the reasoning behind this shift in more depth: why proof now carries more weight than a resume, and what building that visibility looks like in practice. It's a 31-page briefing, not a course, and it costs nine dollars.
 
 ---
