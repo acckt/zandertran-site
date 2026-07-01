@@ -102,6 +102,8 @@ You don't need the whole plan. You need one visible proof asset and a way to tes
 
 That's a different skill than planning. Planning happens alone, in your head, where every idea sounds equally plausible and equally risky. Testing happens in public, in front of actual people who either respond to what you put out or don't. Only one of those gives you real information.
 
+It also tends to work once someone actually starts. In an [AIER survey](https://aier.org/new-careers-for-older-workers-2/) of workers who attempted a career change after 45, 82 percent reported a successful transition. Execution usually isn't the problem. Starting is.
+
 [Visible in 5](https://start.zandertran.com/the-invisible-expert-system-vsl/landing-page) is built for exactly that. Five days. A clear completion state. By day two, you've worked through a monetization compass that maps your pattern against the four shapes above. By day five, you've published your first visible proof asset, not theorized about one.
 
 $27 gets you five days of structure instead of six months of open tabs.

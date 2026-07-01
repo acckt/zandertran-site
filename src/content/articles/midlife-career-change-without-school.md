@@ -70,6 +70,8 @@ You're closer to her than you are to that 22-year-old. You have 20-plus years of
 
 A new certificate doesn't fix that. It adds a second, weaker proof of the same competence you already have stronger, undocumented proof of. That's tuition spent restating something already true, not reinvention.
 
+The market is already catching up to this. [McKinsey's research on skills-based hiring](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/taking-a-skills-based-approach-to-building-the-future-workforce) found that skills predict job performance five times more accurately than education does. Skills beat work experience alone by more than two to one. Employers are figuring out what your own track record has been proving for 20-plus years.
+
 ---
 
 ## The Real Cost of Retraining at This Stage
