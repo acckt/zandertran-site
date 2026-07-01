@@ -98,6 +98,8 @@ For decades, organizations expanded their senior layers as the workforce grew. C
 
 Research from the Urban Institute puts numbers on it. In a study of workers displaced between 2008 and 2011, reemployed workers ages 51 to 61 took home 21 percent less on their new job than before the layoff. Workers ages 25 to 34 took a 7 percent cut. Fewer than one in four displaced workers over 50 found any work within 12 months of losing their job. (Johnson and Mommaerts, Urban Institute, 2011.)
 
+These three forces explain what happens inside an organization you're already part of. If your challenge is the hiring pipeline itself, applications and interviews for new roles going nowhere, [Age Discrimination in Hiring](/articles/age-discrimination-in-hiring) covers that specific mechanism.
+
 These three forces compound. And none of them have anything to do with your performance.
 
 ---
