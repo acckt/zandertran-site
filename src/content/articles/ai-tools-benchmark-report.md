@@ -44,11 +44,11 @@ So we built a different benchmark. We tested 12 AI tools across four categories,
 - [How We Scored](#how-we-scored)
 - [Avatar Tools](#avatar-tools)
 - [Voice Tools](#voice-tools)
-- [Video Editing and Repurposing Tools](#video-tools)
+- [Video Editing and Repurposing Tools](#video-editing-and-repurposing-tools)
 - [Email Tools](#email-tools)
 - [The Overall Picture](#the-overall-picture)
 
-## Top Findings {#top-findings}
+## Top Findings
 
 These are the headline results. Each one is written to stand on its own, so quote whichever fits your work.
 
@@ -66,7 +66,7 @@ These are the headline results. Each one is written to stand on its own, so quot
 
 **No single tool won more than one category.** The strongest approach is a small stack of specialists, not one platform that claims to do everything.
 
-## How We Scored {#how-we-scored}
+## How We Scored
 
 Every tool was scored 1 to 10 on five criteria, for a maximum of 50 points.
 
@@ -80,7 +80,7 @@ The authority-fit criterion is what makes this benchmark different. A tool built
 
 **A note on the numbers.** These scores were produced from a combination of first-hand testing (by our team and by students building their own platforms) and documented, independently reported tool performance: direct pricing-page checks, G2 and Capterra ratings, and head-to-head usage tests, most recently reconciled on July 3, 2026. They reflect real evaluation, not marketing claims. The complete raw scoring data, including per-criterion notes for all 12 tools, is available in the full report via the sign-up below. If a tool's pricing or capability has shifted since publication, the live scores get updated and dated.
 
-## Avatar Tools {#avatar-tools}
+## Avatar Tools
 
 | Tool | Quality | Ease | Authority Fit | Value | Learning | Total |
 |---|---|---|---|---|---|---|
@@ -90,7 +90,7 @@ The authority-fit criterion is what makes this benchmark different. A tool built
 
 **What won and why.** [HeyGen](https://ztran.link/heygen) *(affiliate link)* took the category because its Avatar IV model produces the most expressive, natural on-screen presence available, which is precisely what a personal authority platform needs. Synthesia is a genuinely strong product that scored well below HeyGen for one specific reason: it is built for governed, consistent enterprise training content, and that deliberate neutrality is the wrong tool for building a recognizable personal voice. [Synthesys.io](https://ztran.link/synthesys) *(affiliate link)* finished last, and not narrowly. Its cheapest-of-the-three price tag is undercut by a live customer complaint about credits burning up to ten times faster than advertised, an export workflow that requires speaking your own script aloud before it releases the file, and near-total absence from independent comparison roundups. The full comparison of the top two lives in the [HeyGen vs Synthesia breakdown](/articles/heygen-vs-synthesia).
 
-## Voice Tools {#voice-tools}
+## Voice Tools
 
 | Tool | Quality | Ease | Authority Fit | Value | Learning | Total |
 |---|---|---|---|---|---|---|
@@ -101,7 +101,7 @@ The authority-fit criterion is what makes this benchmark different. A tool built
 
 **What won and why.** [ElevenLabs](https://ztran.link/elevenlabs) *(affiliate link)* posted the second-highest score of any tool in the entire benchmark, just one point behind Kit. Its voice quality is the strongest available, and its voice cloning lets you build a consistent, personal voice across everything you publish, the single most valuable capability for authority building in this category. Murf earns its place with polished, business-ready voices that need little tuning. WellSaid Labs is the pick for producing large volumes of consistent content. Resemble.ai scored well on value for its pay-as-you-go model, but its more technical, API-first interface pulled down its ease and learning-curve scores for a non-technical professional. The head-to-head on when each one beats the leader is in the [ElevenLabs alternatives guide](/articles/elevenlabs-alternatives).
 
-## Video Editing and Repurposing Tools {#video-tools}
+## Video Editing and Repurposing Tools
 
 | Tool | Quality | Ease | Authority Fit | Value | Learning | Total |
 |---|---|---|---|---|---|---|
@@ -111,7 +111,7 @@ The authority-fit criterion is what makes this benchmark different. A tool built
 
 **What won and why.** This is the one category where head-to-head testing overturned the assumption going in. Opus Clip won clearly, not narrowly: in a direct test, it generated 22 clips from a 45-minute recording in under 4 minutes, while Descript took roughly 46 minutes to produce just 5 clips from the same job, because Descript's clipping, captioning, and reframing are manual, per-clip steps rather than an automated pass. Descript is still the deeper editor, and it's the stronger choice if editing, voice cleanup, and repurposing all need to live in one subscription. But for the specific job this category measures, turning a long recording into shorts fast, Opus Clip is the better first purchase, not the second one. Fliki rounds out the category as a capable generalist that specializes in nothing: it's built to generate synthetic talking-head video from a script, not to repurpose footage you've already recorded, which is a structurally weaker fit for repackaging your own real appearances.
 
-## Email Tools {#email-tools}
+## Email Tools
 
 | Tool | Quality | Ease | Authority Fit | Value | Learning | Total |
 |---|---|---|---|---|---|---|
@@ -120,7 +120,7 @@ The authority-fit criterion is what makes this benchmark different. A tool built
 
 **What won and why.** [Kit](https://ztran.link/kit) *(affiliate link)* won email by a wide margin, and posted the single highest composite score of any tool in the entire benchmark. It is built specifically for individual creators monetizing an audience, its tagging and automation map directly onto how an expert thinks about their readers, and its free tier covers up to 10,000 subscribers. Mailchimp is a mature, capable platform that scored lower here for the same reason Synthesia did in avatar: it is a generalist small-business marketing tool, not a creator-first one, and a solo professional ends up paying generalist prices for a specialist need. The full side-by-side is in the [Mailchimp vs Kit comparison](/articles/mailchimp-vs-kit).
 
-## The Overall Picture {#the-overall-picture}
+## The Overall Picture
 
 Add up the category winners and a clear pattern appears. Kit (45), ElevenLabs (44), HeyGen (41), and Opus Clip (34) each won their category by doing one job well, not by doing every job adequately. Notice what that list is not: it is not one platform that does everything. It is a small set of specialists, each best at one job.
 
