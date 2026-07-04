@@ -239,9 +239,8 @@ body::before {
 
 .article-body th,
 .article-body td {
-      padding: 14px 20px;
+      padding: 14px 14px;
       text-align: left;
-      white-space: nowrap;
       border-bottom: 1px solid var(--border-light);
     }
 
@@ -385,6 +384,15 @@ body::before {
       box-shadow: 0 8px 32px rgba(192,139,58,0.3);
       color: var(--warm-white);
       border: none;
+    }
+
+/* .article-body a's higher specificity (class+element) beats the bare
+   .btn-primary class, which was recoloring CTA button text to gold-light
+   on a gold background and adding a stray underline. Re-assert here. */
+.article-body .btn-primary,
+.article-body .btn-primary:hover {
+      color: var(--warm-white);
+      border-bottom: none;
     }
 
 .faq-section {
@@ -603,7 +611,7 @@ body::before {
       .article-cta { padding: 28px 24px; }
       .article-body blockquote { padding: 24px; margin: 36px 0; }
       .article-body table { margin: 32px 0; }
-      .article-body th, .article-body td { padding: 10px 14px; font-size: 14px; }
+      .article-body th, .article-body td { padding: 10px 10px; font-size: 14px; }
       .related-section { padding: 0 24px 72px; }
       .related-grid { grid-template-columns: 1fr; }
       .related-card-body { padding: 24px 24px 20px; }
