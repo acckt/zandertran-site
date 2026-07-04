@@ -1,0 +1,73 @@
+<svg viewBox="0 0 820 680" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="820" height="680" fill="#0D1B2A"/>
+
+  <!-- Title -->
+  <text x="40" y="46" font-family="'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="600" fill="#FDFAF5">AI Tools for Thought Leaders: 2026 Benchmark</text>
+  <text x="40" y="70" font-family="'DM Mono', monospace" font-size="12.5" letter-spacing="1.5" fill="#7A8A9A">COMPOSITE SCORE OUT OF 50 &#8226; SCORED FOR AUTHORITY FIT, NOT AGENCY SCALE</text>
+  <line x1="40" y1="82" x2="780" y2="82" stroke="rgba(192,139,58,0.2)" stroke-width="1"/>
+
+  <!-- AVATAR -->
+  <text x="40" y="112" font-family="'DM Mono', monospace" font-size="12" letter-spacing="2" fill="#233de8" font-weight="700">AVATAR</text>
+  <!-- HeyGen 41 -->
+  <text x="265" y="134" text-anchor="end" font-size="14" fill="#FDFAF5">HeyGen</text>
+  <rect x="275" y="121" width="360.8" height="18" rx="3" fill="#233de8"/>
+  <text x="643" y="135" font-size="13" font-weight="700" fill="#FDFAF5">41</text>
+  <!-- Synthesia 33 -->
+  <text x="265" y="164" text-anchor="end" font-size="14" fill="#FDFAF5">Synthesia</text>
+  <rect x="275" y="151" width="290.4" height="18" rx="3" fill="#233de8" opacity="0.75"/>
+  <text x="573" y="165" font-size="13" font-weight="700" fill="#FDFAF5">33</text>
+  <!-- Synthesys.io 24 -->
+  <text x="265" y="194" text-anchor="end" font-size="14" fill="#FDFAF5">Synthesys.io</text>
+  <rect x="275" y="181" width="211.2" height="18" rx="3" fill="#233de8" opacity="0.6"/>
+  <text x="494" y="195" font-size="13" font-weight="700" fill="#FDFAF5">24</text>
+
+  <!-- VOICE -->
+  <text x="40" y="227" font-family="'DM Mono', monospace" font-size="12" letter-spacing="2" fill="#58c4e8" font-weight="700">VOICE</text>
+  <!-- ElevenLabs 44 -->
+  <text x="265" y="249" text-anchor="end" font-size="14" fill="#FDFAF5">ElevenLabs</text>
+  <rect x="275" y="236" width="387.2" height="18" rx="3" fill="#58c4e8"/>
+  <text x="670" y="250" font-size="13" font-weight="700" fill="#FDFAF5">44</text>
+  <!-- Murf 36 -->
+  <text x="265" y="279" text-anchor="end" font-size="14" fill="#FDFAF5">Murf</text>
+  <rect x="275" y="266" width="316.8" height="18" rx="3" fill="#58c4e8" opacity="0.75"/>
+  <text x="600" y="280" font-size="13" font-weight="700" fill="#FDFAF5">36</text>
+  <!-- WellSaid Labs 34 -->
+  <text x="265" y="309" text-anchor="end" font-size="14" fill="#FDFAF5">WellSaid Labs</text>
+  <rect x="275" y="296" width="299.2" height="18" rx="3" fill="#58c4e8" opacity="0.6"/>
+  <text x="582" y="310" font-size="13" font-weight="700" fill="#FDFAF5">34</text>
+  <!-- Resemble.ai 31 -->
+  <text x="265" y="339" text-anchor="end" font-size="14" fill="#FDFAF5">Resemble.ai</text>
+  <rect x="275" y="326" width="272.8" height="18" rx="3" fill="#58c4e8" opacity="0.5"/>
+  <text x="556" y="340" font-size="13" font-weight="700" fill="#FDFAF5">31</text>
+
+  <!-- VIDEO -->
+  <text x="40" y="372" font-family="'DM Mono', monospace" font-size="12" letter-spacing="2" fill="#6f35e3" font-weight="700">VIDEO / REPURPOSING</text>
+  <!-- Opus Clip 34 -->
+  <text x="265" y="394" text-anchor="end" font-size="14" fill="#FDFAF5">Opus Clip</text>
+  <rect x="275" y="381" width="299.2" height="18" rx="3" fill="#6f35e3"/>
+  <text x="582" y="395" font-size="13" font-weight="700" fill="#FDFAF5">34</text>
+  <!-- Descript 30 -->
+  <text x="265" y="424" text-anchor="end" font-size="14" fill="#FDFAF5">Descript</text>
+  <rect x="275" y="411" width="264" height="18" rx="3" fill="#6f35e3" opacity="0.75"/>
+  <text x="547" y="425" font-size="13" font-weight="700" fill="#FDFAF5">30</text>
+  <!-- Fliki 29 -->
+  <text x="265" y="454" text-anchor="end" font-size="14" fill="#FDFAF5">Fliki</text>
+  <rect x="275" y="441" width="255.2" height="18" rx="3" fill="#6f35e3" opacity="0.6"/>
+  <text x="538" y="455" font-size="13" font-weight="700" fill="#FDFAF5">29</text>
+
+  <!-- EMAIL -->
+  <text x="40" y="487" font-family="'DM Mono', monospace" font-size="12" letter-spacing="2" fill="#C08B3A" font-weight="700">EMAIL</text>
+  <!-- Kit 45 -->
+  <text x="265" y="509" text-anchor="end" font-size="14" fill="#FDFAF5">Kit</text>
+  <rect x="275" y="496" width="396" height="18" rx="3" fill="#C08B3A"/>
+  <text x="679" y="510" font-size="13" font-weight="700" fill="#FDFAF5">45</text>
+  <!-- Mailchimp 29 -->
+  <text x="265" y="539" text-anchor="end" font-size="14" fill="#FDFAF5">Mailchimp</text>
+  <rect x="275" y="526" width="255.2" height="18" rx="3" fill="#C08B3A" opacity="0.6"/>
+  <text x="538" y="540" font-size="13" font-weight="700" fill="#FDFAF5">29</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="600" x2="780" y2="600" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="40" y="628" font-size="13" fill="#7A8A9A">Category winners: Kit (email, top overall), ElevenLabs (voice), HeyGen (avatar), Opus Clip (video).</text>
+  <text x="40" y="656" font-family="'DM Mono', monospace" font-size="11.5" letter-spacing="1" fill="#C08B3A">SOURCE: ZANDERTRAN.COM &#8226; AI TOOLS FOR THOUGHT LEADERS: THE 2026 BENCHMARK REPORT</text>
+</svg>
