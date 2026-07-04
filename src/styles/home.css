@@ -1154,13 +1154,26 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--navy);
+      color: var(--warm-white);
       cursor: pointer;
       transition: background 0.2s;
       white-space: nowrap;
     }
 
 .email-btn:hover { background: var(--gold-light); }
+
+.newsletter-errors {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 12px;
+      max-width: 480px;
+      text-align: center;
+      color: #E8998A;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+.newsletter-errors:empty { display: none; }
 
 .newsletter-note {
       font-family: 'DM Mono', monospace;
