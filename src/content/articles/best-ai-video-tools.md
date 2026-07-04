@@ -27,7 +27,7 @@ faqs:
   - q: "What's the cheapest way to get started with AI video tools?"
     a: "Descript's free tier is the most usable starting point across this list, since it covers editing without a hard paywall on basic functionality. HeyGen and Opus Clip both have workable free tiers too, just with tighter limits."
   - q: "Is Synthesys.io the same thing as Synthesia?"
-    a: "No, and this trips people up constantly. They're separate companies with similar-sounding names. Synthesys.io is the budget long-form option covered here. Synthesia is a different, more expensive tool covered in the [HeyGen vs Synthesia comparison](/articles/heygen-vs-synthesia)."
+    a: "No, and this trips people up constantly. They're separate companies with similar-sounding names. Synthesys.io is the budget long-form option covered here. Synthesia is a different, more expensive tool covered in the HeyGen vs Synthesia comparison elsewhere on this site."
   - q: "Can Opus Clip work with video I didn't record in HeyGen or Descript?"
     a: "Yes. It works from any uploaded long-form video regardless of what tool produced it, including a straight camera recording or a Zoom call export."
   - q: "Which of these tools is best for someone who's never edited video before?"
